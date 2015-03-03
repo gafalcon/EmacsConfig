@@ -149,3 +149,7 @@
 (setenv "PATH" (concat "/usr/share/smlnj/bin:" (getenv "PATH")))
 (setq exec-path (cons "/usr/share/smlnj/bin"  exec-path))
 
+;; PHP auto yasnippets
+(require 'php-auto-yasnippets)
+(define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
+(payas/ac-setup)
