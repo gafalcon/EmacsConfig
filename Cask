@@ -41,6 +41,7 @@
 (depends-on "neotree")
 (depends-on "nlinum")
 (depends-on "pallet")
+(depends-on "php-mode")
 (depends-on "popup")
 (depends-on "powerline-evil")
 (depends-on "projectile")
