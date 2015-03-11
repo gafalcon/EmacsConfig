@@ -32,7 +32,7 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa" . 
+  (add-to-list 'package-archives '("melpa".
 "http://melpa.milkbox.net/packages/") t)
   )
 ;; Robe configuration
@@ -70,8 +70,6 @@
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
-(provide 'init)
-;;; init.el ends here
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -97,7 +95,7 @@
      ("#49483E" . 100))))
  '(linum-format " %7i ")
  '(magit-diff-use-overlays nil)
- '(sp-ignore-modes-list (quote (php-mode minibuffer-inactive-mode web-mode)))
+ '(sp-ignore-modes-list (quote (minibuffer-inactive-mode)))
  '(syslog-debug-face
    (quote
     ((t :background unspecified :foreground "#A1EFE4" :weight bold))))
@@ -153,3 +151,5 @@
 (require 'php-auto-yasnippets)
 (define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
 (payas/ac-setup)
+(provide 'init)
+;;; init.el ends here
