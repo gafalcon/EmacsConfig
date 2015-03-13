@@ -27,6 +27,7 @@
 (load "01projectile.el")
 (load "emmet.el")
 (load "evil-mode-config.el")
+(load "jscript.el")
 ;(load "flymakeConfig.el")
 ;(require 'ess-site)
 (when (>= emacs-major-version 24)
@@ -151,5 +152,16 @@
 (require 'php-auto-yasnippets)
 (define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
 (payas/ac-setup)
+
+
+;; ac-etags
+(custom-set-variables
+  '(ac-etags-requires 3))
+
+(eval-after-load "etags"
+  '(progn
+      (ac-etags-setup)))
+(add-hook 'php-mode-common-hook 'ac-etags-ac-setup)
+
 (provide 'init)
 ;;; init.el ends here

@@ -4,6 +4,7 @@
 
 (depends-on "ac-emmet")
 (depends-on "ac-helm")
+(depends-on "ac-etags")
 (depends-on "ag")
 (depends-on "auctex")
 (depends-on "auto-complete")
@@ -15,6 +16,7 @@
 (depends-on "enh-ruby-mode")
 (depends-on "ensime")
 (depends-on "epc")
+(depends-on "etags-select")
 (depends-on "evil")
 (depends-on "evil-god-state")
 (depends-on "evil-leader")
@@ -42,6 +44,7 @@
 (depends-on "nlinum")
 (depends-on "pallet")
 (depends-on "php-mode")
+(depends-on "php-auto-yasnippets")
 (depends-on "popup")
 (depends-on "powerline-evil")
 (depends-on "projectile")
