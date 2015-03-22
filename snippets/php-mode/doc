@@ -1,0 +1,9 @@
+#name : /** doc **/
+# --
+/**
+* ${Description}
+*
+* @param ${param}
+*
+* @return ${return}
+*/$0

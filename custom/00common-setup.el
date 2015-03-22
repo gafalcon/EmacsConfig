@@ -29,7 +29,7 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
-(load-theme 'junio t)
+(load-theme 'spolsky t)
 ;;(load-theme 'monokai t)
 ;;(load-theme 'cyberpunk t)
 (global-nlinum-mode t)
