@@ -102,6 +102,7 @@
 	 ("#49483E" . 100))))
  '(linum-format " %7i ")
  '(magit-diff-use-overlays nil)
+ '(php-executable "/opt/lampp/bin/php")
  '(sp-ignore-modes-list (quote (minibuffer-inactive-mode)))
  '(syslog-debug-face
    (quote

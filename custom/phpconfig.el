@@ -1,7 +1,7 @@
 ;; PHP auto yasnippets
 (require 'php-auto-yasnippets)
 (define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
-(payas/ac-setup)
+;;(payas/ac-setup)
 
 ;; PHP refactor mode: Use: C-c r and the following
 ;; lv: Convert a local variable to an instance variable

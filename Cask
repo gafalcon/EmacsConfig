@@ -47,6 +47,7 @@
 (depends-on "pallet")
 (depends-on "php-auto-yasnippets")
 (depends-on "php-mode")
+(depends-on "php-refactor-mode")
 (depends-on "popup")
 (depends-on "powerline-evil")
 (depends-on "projectile")

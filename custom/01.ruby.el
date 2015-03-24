@@ -48,3 +48,15 @@ return nil)))
 (local-set-key (kbd "C-c l") 'rspec-compile-on-line)
 (local-set-key (kbd "C-c k") 'rspec-compile-file)
 ))
+
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+
+(add-hook 'robe-mode-hook 'ac-robe-setup)
+
+;; Advice inf-ruby to activate rvm automatically
+(defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
+  (rvm-activate-corresponding-ruby))
+
+
+(provide '01.ruby)
+;;; 01.ruby.el ends here
