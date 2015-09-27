@@ -29,9 +29,9 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
-(load-theme 'spolsky t)
+;;(load-theme 'spolsky t)
 ;;(load-theme 'monokai t)
-;;(load-theme 'cyberpunk t)
+(load-theme 'cyberpunk t)
 (global-nlinum-mode t)
 (set-default-font "Monospace 10")
 

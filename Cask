@@ -1,4 +1,3 @@
-(source "melpa" "http://melpa.milkbox.net/packages/")
 (source gnu)
 (source marmalade)
 (source melpa)
@@ -30,6 +29,7 @@
 (depends-on "git")
 (depends-on "grizzl")
 (depends-on "haml-mode")
+(depends-on "haskell-mode")
 (depends-on "helm")
 (depends-on "helm-c-yasnippet")
 (depends-on "helm-projectile")
@@ -65,4 +65,5 @@
 (depends-on "tree-mode")
 (depends-on "web-mode")
 (depends-on "windata")
+(depends-on "yaml-mode")
 (depends-on "yasnippet")
