@@ -30,8 +30,8 @@
 (global-set-key [f8] 'neotree-toggle)
 
 ;;(load-theme 'spolsky t)
-;;(load-theme 'monokai t)
-(load-theme 'cyberpunk t)
+(load-theme 'monokai t)
+;;(load-theme 'cyberpunk t)
 (global-nlinum-mode t)
 (set-default-font "Monospace 10")
 
@@ -42,5 +42,6 @@
 (require 'smartparens-config)
 
 (setq ido-ignore-buffers '("\\` " "^\*"))
+(global-auto-revert-mode t) ;; auto refresh buffers when files have changed (for Git)
 (provide '00common-setup)
 ;;; 00common-setup.el ends here
