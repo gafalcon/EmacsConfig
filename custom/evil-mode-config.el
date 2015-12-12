@@ -47,6 +47,8 @@
 (powerline-evil-center-color-theme)
 
 (evil-set-initial-state 'python-django-mode 'emacs)
+;;; Git Commit Mode (a Magit minor mode):
+(add-hook 'git-commit-mode-hook 'evil-insert-state)
 
 (global-evil-tabs-mode t)
 ;; (define-key evil-normal-state-map (kbd "<C-tab>") 'other-window)
