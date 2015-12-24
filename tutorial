@@ -1,3 +1,7 @@
 apropos-command : list all mode's command
 
 Codefolding: hs-minor-mode: zR, zM, zo, zc
+
+M-x occur: search matches in a buffer.
+
+C-c i: imenu
