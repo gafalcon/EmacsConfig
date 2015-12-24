@@ -63,6 +63,7 @@
 (depends-on "sml-mode")
 (depends-on "sublime-themes")
 (depends-on "tree-mode")
+(depends-on "virtualenvwrapper")
 (depends-on "web-mode")
 (depends-on "windata")
 (depends-on "yaml-mode")

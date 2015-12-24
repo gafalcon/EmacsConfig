@@ -1,1 +1,3 @@
 apropos-command : list all mode's command
+
+Codefolding: hs-minor-mode: zR, zM, zo, zc

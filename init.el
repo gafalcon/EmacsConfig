@@ -21,6 +21,11 @@
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "<C-return>") 'yas-expand)
 
+;; Essential settings.
+(setq inhibit-splash-screen t
+      inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
+
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "00common-setup.el")
 (load "ac.el")
@@ -41,10 +46,21 @@
   )
 ;; Robe configuration
 (add-hook 'ruby-mode-hook 'robe-mode)
+
+;; -------- Python configs -----------------
 ;; Standard Jedi.el setting
 (add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook (lambda ()
+                              (hack-local-variables)
+                              (venv-workon project-venv-name)))
 (setq jedi:complete-on-dot t)
+
+
+
+
+
 ;; dirtree
+
 ;;(autoload 'dirtree "dirtree" "Add directory to tree view" t)
 
 (require 'expand-region)
@@ -82,6 +98,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-etags-requires 3)
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#000000" "#8b0000" "#00ff00" "#ffa500" "#7b68ee" "#dc8cc3" "#93e0e3" "#dcdccc"])
  '(compilation-message-face (quote default))
@@ -104,6 +122,10 @@
  '(magit-diff-use-overlays nil)
  '(org-startup-indented t)
  '(php-executable "/opt/lampp/bin/php")
+ '(safe-local-variable-values
+   (quote
+	((project-venv-name . "scrapy")
+	 (project-venv-name . "venv"))))
  '(sp-ignore-modes-list (quote (minibuffer-inactive-mode)))
  '(syslog-debug-face
    (quote
@@ -154,7 +176,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:background nil))))
- '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "spring green")))))
+ '(powerline-active1 ((t (:background "#474747" :weight bold))))
+ '(powerline-active2 ((t (:background "#6b6b6b" :weight bold))))
+ '(powerline-evil-base-face ((t (:inherit mode-line :foreground "white" :weight bold))))
+ '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "spring green"))))
+ '(web-mode-html-attr-value-face ((t (:foreground "#E6DB74" :slant italic))))
+ '(web-mode-html-tag-face ((t (:foreground "Snow4" :weight bold)))))
 
 (setenv "PATH" (concat "/usr/share/smlnj/bin:" (getenv "PATH")))
 (setq exec-path (cons "/usr/share/smlnj/bin"  exec-path))
@@ -174,5 +201,6 @@ browse-url-browser-function 'browse-url-generic)
 ;; Start org in visual-line mode
 (add-hook 'org-mode-hook (lambda ()
 						   (visual-line-mode 1)))
+(toggle-frame-maximized)
 (provide 'init)
 ;;; init.el ends here

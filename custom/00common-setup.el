@@ -22,7 +22,7 @@
 ;;;(setq inhibit-startup-message t) ; stop showing welcome page
 (setq make-backup-files nil) ; stop creating ~ files
 
-(setq python-shell-interpreter "/usr/bin/python2.7")
+;;(setq python-shell-interpreter "/usr/bin/python2.7")
 
 ;; neotree
 (add-to-list 'load-path "~/.emacs.d/neotree")
@@ -30,8 +30,9 @@
 (global-set-key [f8] 'neotree-toggle)
 
 ;;(load-theme 'spolsky t)
-(load-theme 'monokai t)
+;;(load-theme 'monokai t)
 ;;(load-theme 'cyberpunk t)
+(load-theme 'junio t)
 (global-nlinum-mode t)
 (set-default-font "Monospace 10")
 
@@ -43,5 +44,8 @@
 
 (setq ido-ignore-buffers '("\\` " "^\*"))
 (global-auto-revert-mode t) ;; auto refresh buffers when files have changed (for Git)
+
+;; Global code-folding
+(add-hook 'prog-mode-hook #'hs-minor-mode)
 (provide '00common-setup)
 ;;; 00common-setup.el ends here
