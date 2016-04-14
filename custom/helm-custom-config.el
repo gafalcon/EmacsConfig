@@ -7,4 +7,5 @@
 (global-set-key (kbd "C-:") 'ac-complete-with-helm)
 (global-set-key (kbd "M-p") 'helm-projectile)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 (define-key ac-complete-mode-map (kbd "C-:") 'ac-complete-with-helm)

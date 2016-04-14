@@ -32,9 +32,13 @@
 ;;(load-theme 'spolsky t)
 ;;(load-theme 'monokai t)
 ;;(load-theme 'cyberpunk t)
-(load-theme 'junio t)
+;; (load-theme 'junio t)
+(load-theme 'deeper-blue t)
+
+
 (global-nlinum-mode t)
-(set-default-font "Monospace 10")
+;; (set-default-font "Ubuntu Bold 10")
+(set-frame-font "Terminus Bold 10")
 
 ;;; hide tool-bar
 (tool-bar-mode -1)

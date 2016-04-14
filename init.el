@@ -30,12 +30,13 @@
 (load "00common-setup.el")
 (load "ac.el")
 (load "helm-custom-config.el")
-(load "01.ruby.el")
+;; (load "01.ruby.el")
 (load "01projectile.el")
 (load "emmet.el")
 (load "evil-mode-config.el")
+(load "python_jedi_venv.el")
 (load "jscript.el")
-(load "phpconfig.el")
+;; (load "phpconfig.el")
 ;(load "flymakeConfig.el")
 ;(require 'ess-site)
 (when (>= emacs-major-version 24)
@@ -45,15 +46,15 @@
 "http://melpa.milkbox.net/packages/") t)
   )
 ;; Robe configuration
-(add-hook 'ruby-mode-hook 'robe-mode)
+;; (add-hook 'ruby-mode-hook 'robe-mode)
 
 ;; -------- Python configs -----------------
 ;; Standard Jedi.el setting
-(add-hook 'python-mode-hook 'jedi:setup)
-(add-hook 'python-mode-hook (lambda ()
-                              (hack-local-variables)
-                              (venv-workon project-venv-name)))
-(setq jedi:complete-on-dot t)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (add-hook 'python-mode-hook (lambda ()
+;;                               (hack-local-variables)
+;;                               (venv-workon project-venv-name)))
+;; (setq jedi:complete-on-dot t)
 
 
 
@@ -90,8 +91,8 @@
 (global-evil-leader-mode)
 (require 'evil-org)
 
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+;; (require 'ensime)
+;; (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
