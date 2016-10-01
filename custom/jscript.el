@@ -3,7 +3,7 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
-(add-hook 'js2-mode-hook 'ac-js2-mode)
+;;(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;;Evaluate your javascript code for candidates set to true
 ;;(setq ac-js2-evaluate-calls t)
@@ -22,7 +22,7 @@
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (eval-after-load 'tern
   '(progn
-	 (require 'tern-autocomplete)
+	 (require 'tern-auto-complete)
 	 (tern-ac-setup)))
 
 

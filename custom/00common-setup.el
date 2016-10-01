@@ -33,15 +33,19 @@
 ;;(load-theme 'monokai t)
 ;;(load-theme 'cyberpunk t)
 ;; (load-theme 'junio t)
-(load-theme 'deeper-blue t)
+(if (display-graphic-p)
+	(load-theme 'atom-one-dark t)
+  (load-theme 'cyberpunk t))
+;;(load-theme 'deeper-blue t)
 
 
 (global-nlinum-mode t)
-;; (set-default-font "Ubuntu Bold 10")
-(set-frame-font "Terminus Bold 10")
-
-;;; hide tool-bar
+;;(set-frame-font "Terminus Bold 9")
+(set-frame-font "DejaVu Sans Mono Book 9")
+;;; hide tool-bar and scroll bar
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
+
 ;; SMARTPARENS;;;;
 (smartparens-global-mode t)
 (require 'smartparens-config)
@@ -54,6 +58,13 @@
 
 ;; Global imenu keybinding
 (global-set-key (kbd "C-c i") 'helm-semantic-or-imenu)
+;; Global semantic
+;;(global-set-key (kbd "C-c i") 'helm-semantic)
+
+(global-set-key (kbd "<C-up>") 'shrink-window)
+(global-set-key (kbd "<C-down>") 'enlarge-window)
+(global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
 ;; Expand block when goto line
 (defadvice goto-line (after expand-after-goto-line
@@ -69,6 +80,12 @@
   (save-excursion
 	(hs-show-block)))
 
+;; ;; Expand block when semantic
+;; (defadvice helm-semantic (after expand-after-goto-line
+;; 							activate compile)
+;;   "Hideshow-expand affected block when using 'goto-line' in a collapsed buffer."
+;;   (save-excursion
+;; 	(hs-show-block)))
 
 (provide '00common-setup)
 ;;; 00common-setup.el ends here
