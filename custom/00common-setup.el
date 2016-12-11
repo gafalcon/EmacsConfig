@@ -18,7 +18,7 @@
 (global-set-key [f5] 'comment-region)
 (global-set-key [f6] 'uncomment-region)
 (global-set-key [f2] 'indent-region)
-
+(global-set-key [f12] 'multi-term-dedicated-toggle)
 ;;;(setq inhibit-startup-message t) ; stop showing welcome page
 (setq make-backup-files nil) ; stop creating ~ files
 
@@ -34,23 +34,35 @@
 ;;(load-theme 'cyberpunk t)
 ;; (load-theme 'junio t)
 (if (display-graphic-p)
-	(load-theme 'atom-one-dark t)
+	(load-theme 'dracula t)
   (load-theme 'cyberpunk t))
 ;;(load-theme 'deeper-blue t)
+;;(load-theme 'dracula t)
+(require 'doom-themes)
+;; (load-theme 'doom-one t) ;; or doom-dark, etc.
 
+(set-face-attribute 'region nil :background "#3d4451")
+(set-face-attribute 'region nil :foreground 'unspecified)
+;;; OPTIONAL
+;; brighter source buffers
+(add-hook 'find-file-hook 'doom-buffer-mode)
+;; brighter minibuffer when active
+(add-hook 'minibuffer-setup-hook 'doom-brighten-minibuffer)
+
+;; ;; Custom neotree theme
+(require 'doom-neotree)
 
 (global-nlinum-mode t)
 ;;(set-frame-font "Terminus Bold 9")
-(set-frame-font "DejaVu Sans Mono Book 9")
-;;; hide tool-bar and scroll bar
+;;(set-frame-font "DejaVu Sans Mono Book 9")
+;;; hide tool-bar and scroll bar and menu bar
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
+(menu-bar-mode -1)
 ;; SMARTPARENS;;;;
 (smartparens-global-mode t)
 (require 'smartparens-config)
 
-(setq ido-ignore-buffers '("\\` " "^\*"))
 (global-auto-revert-mode t) ;; auto refresh buffers when files have changed (for Git)
 
 ;; Global code-folding
@@ -86,6 +98,12 @@
 ;;   "Hideshow-expand affected block when using 'goto-line' in a collapsed buffer."
 ;;   (save-excursion
 ;; 	(hs-show-block)))
+
+(setq multi-term-program "/usr/bin/zsh")
+
+(setq org-fontify-whole-heading-line t
+      org-fontify-done-headline t
+      org-fontify-quote-and-verse-blocks t)
 
 (provide '00common-setup)
 ;;; 00common-setup.el ends here

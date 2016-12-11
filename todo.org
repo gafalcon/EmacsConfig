@@ -1,0 +1,14 @@
+* packages
+** yasnippet
+*** show yasnippets on ac-list
+** evil packages
+*** evil magit
+*** evil dired
+*** evil org
+** find package to list recent open files
+** customize helm-mt
+** javascript
+*** react/jsx
+*** npm
+*** tern
+
