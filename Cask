@@ -23,6 +23,7 @@
 (depends-on "cyberpunk-theme")
 (depends-on "dash")
 (depends-on "deferred")
+(depends-on "dired-k")
 (depends-on "discover-my-major")
 (depends-on "doom-themes")
 (depends-on "elscreen")
