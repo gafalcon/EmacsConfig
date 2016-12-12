@@ -38,10 +38,16 @@
 (setq jedi:complete-on-dot t)
 
 ;;(add-hook 'python-mode-hook 'jedi-setup-venv)
-(add-hook 'python-mode-hook 'jedi:setup)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
 
+(add-hook 'python-mode-hook 'my/python-mode-hook)
 ; use IPython
 (setq python-shell-interpreter "ipython2"
        python-shell-interpreter-args "-i")
+
+(add-hook 'jedi-mode-hook 'jedi-direx:setup)
+
 ;;(provide 'python_jedi_venv)
 ;;; python_jedi_venv.el ends here

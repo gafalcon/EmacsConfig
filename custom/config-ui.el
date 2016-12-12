@@ -19,7 +19,7 @@
 ;; (require 'doom-themes)
 (set-face-attribute 'region nil :background "#3d4451")
 (set-face-attribute 'region nil :foreground 'unspecified)
-
+(set-face-attribute 'default nil :height 100)
 ;;; OPTIONAL
 ;; brighter source buffers
 (add-hook 'find-file-hook 'doom-buffer-mode)
