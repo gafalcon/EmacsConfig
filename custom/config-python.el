@@ -48,6 +48,7 @@
        python-shell-interpreter-args "-i")
 
 (add-hook 'jedi-mode-hook 'jedi-direx:setup)
+(evil-define-key 'normal python-mode-map "gd" 'jedi:goto-definition)
 
 ;;(provide 'python_jedi_venv)
 ;;; python_jedi_venv.el ends here

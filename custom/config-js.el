@@ -20,6 +20,11 @@
 ;; Tern mode configuration
 ;;__________________________
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+  '(progn
+     (add-to-list 'company-backends 'company-tern)
+     )
+  )
 ;; (eval-after-load 'tern
 ;;   '(progn
 ;; 	 (require 'tern-auto-complete)
