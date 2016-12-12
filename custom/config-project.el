@@ -37,6 +37,11 @@
 	projectile-completion-system 'grizzl
         )
 
+  ;; Press command-p for fuzzy find in project
+  (global-set-key (kbd "s-p") 'projectile-find-file)
+  ;; Press command-b for fuzzy switch buffer
+  (global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
+
   ;; Don't cache ignored files!
   (defun doom*projectile-cache-current-file (orig-fun &rest args)
     (unless (--any (f-descendant-of? buffer-file-name it)
@@ -52,14 +57,6 @@
   (push "Icon"   projectile-globally-ignored-files)
 
   (projectile-global-mode +1))
-;; (projectile-global-mode)
-;; (setq projectile-enable-caching t)
-;; (setq projectile-completion-system 'grizzl)
-;; (setq projectile-indexing-method 'git)
-;; Press command-p for fuzzy find in project
-(global-set-key (kbd "s-p") 'projectile-find-file)
-;; Press command-b for fuzzy switch buffer
-(global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
   
 (provide 'config-project.el)
 ;;; config-project.el ends here

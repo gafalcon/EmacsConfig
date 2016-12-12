@@ -32,7 +32,7 @@
 
 
 (global-auto-revert-mode t) ;; auto refresh buffers when files have changed (for Git)
-
+(setq vc-follow-symlinks t) ;; Follow symlinks
 ;; Global code-folding
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
@@ -48,17 +48,17 @@
 
 ;; Expand block when goto line
 (defadvice goto-line (after expand-after-goto-line
-							activate compile)
+			    activate compile)
   "Hideshow-expand affected block when using 'goto-line' in a collapsed buffer."
   (save-excursion
-	(hs-show-block)))
+    (hs-show-block)))
 
 ;; Expand block when imenu
 (defadvice helm-semantic-or-imenu (after expand-after-goto-line
-							activate compile)
+					 activate compile)
   "Hideshow-expand affected block when using 'goto-line' in a collapsed buffer."
   (save-excursion
-	(hs-show-block)))
+    (hs-show-block)))
 
 ;; ;; Expand block when semantic
 ;; (defadvice helm-semantic (after expand-after-goto-line

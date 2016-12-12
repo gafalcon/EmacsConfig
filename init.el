@@ -19,18 +19,18 @@
 (load "config-core.el")
 (load "config-ui.el")
 (load "config-evil.el")
-(load "ac.el")
+(load "config-ac.el")
 (load "config-helm.el")
 (load "config-project.el")
-;;(load "cpp_configs.el")
-;; (load "01.ruby.el")
-(load "emmet.el")
-(load "python_jedi_venv.el")
-(load "jscript.el")
-(load "02typescript.el")
-(load "phpconfig.el")
-(load "flymakeConfig.el")
-(load "neotree_custom.el")
+(load "config-neotree.el")
+(load "config-flymake.el")
+
+;; Languages
+(load "config-web.el")
+(load "config-python.el")
+(load "config-js.el")
+(load "config-typescript.el")
+(load "config-php.el")
 ;(require 'ess-site)
 (when (>= emacs-major-version 24)
   (require 'package)
@@ -50,17 +50,6 @@
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
 ;; (add-hook 'python-mode-hook 'ac-anaconda-setup)
-
-(require 'rvm)
-;;(rvm-use-default);; use rvm's default ruby for the current Emacs session
-
-(setq auto-mode-alist
-      (cons '("\\.erb$" . web-mode) auto-mode-alist))
-(setq auto-mode-alist
-      (cons '("\\.html$" . web-mode) auto-mode-alist))
-(add-to-list 'auto-mode-alist '("\\.blade.php$" . web-mode))
-;; web-mode engines
-(setq web-mode-engines-alist '(("php" . "\\.phtml\\'") ("blade" . "\\.blade\\.")) )
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'reverse)

@@ -63,9 +63,14 @@
 (setq evil-operator-state-cursor '("red" hollow))
 
 (use-package evil-magit)
-
-(require 'evil-leader)
-(global-evil-leader-mode)
+(use-package evil-leader
+  :config
+  (global-evil-leader-mode)
+  (evil-leader/set-leader ",")
+  (evil-leader/set-key
+    "g" 'magit-status
+    "h" 'help)
+  )
 (require 'evil-org)
 
 ;; Start org in visual-line mode
