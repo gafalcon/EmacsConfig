@@ -3,7 +3,6 @@
 
 ;;; Code:
 (evil-mode 1)
-
 ;;; getting :n[ew] to work
 (evil-ex-define-cmd "n[ew]" 'evil-window-new)
 
@@ -73,6 +72,11 @@
     "k" 'kill-buffer)
   )
 (require 'evil-org)
+
+(use-package evil-mc
+  :config
+  (evil-mc-mode 1)
+  )
 
 ;; Start org in visual-line mode
 (add-hook 'org-mode-hook (lambda ()

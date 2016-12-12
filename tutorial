@@ -15,3 +15,5 @@ M-( : Wrapping in () selected region
 
 , h: help
 , n: neotree
+region
+C-v: evil-visual-mode : Select rectangle
