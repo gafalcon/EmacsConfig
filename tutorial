@@ -2,6 +2,16 @@ apropos-command : list all mode's command
 
 Codefolding: hs-minor-mode: zR, zM, zo, zc
 
-M-x occur: search matches in a buffer.
+M-x occur (M-s o): search matches in a buffer.
 
 C-c i: imenu
+
+C-" : Wrapping in "" selected region
+M-( : Wrapping in () selected region
+
+*** Magit
+, g : Magit status
+<Tab>: view changes in file in status mode
+
+, h: help
+, n: neotree

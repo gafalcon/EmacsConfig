@@ -27,7 +27,11 @@
 (setq make-backup-files nil) ; stop creating ~ files
 
 ;; SMARTPARENS;;;;
-(smartparens-global-mode t)
+(use-package smartparens
+  :config
+  (smartparens-global-mode t)
+  (sp-pair "\"" "\"" :wrap "C-\"")
+  )
 (use-package smartparens-config)
 
 

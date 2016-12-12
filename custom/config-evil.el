@@ -69,7 +69,8 @@
   (evil-leader/set-leader ",")
   (evil-leader/set-key
     "g" 'magit-status
-    "h" 'help)
+    "h" 'help
+    "k" 'kill-buffer)
   )
 (require 'evil-org)
 
