@@ -22,6 +22,9 @@
   (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
   (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
   (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+  (define-key evil-visual-state-map "v" 'er/expand-region)
+  (define-key evil-visual-state-map "V" 'er/contract-region)
+
 
 ;;; Key-chord
   (require 'key-chord)
@@ -29,7 +32,6 @@
 ;;; type jj or jk in insert mode to go back to normal mode
   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-replace-state-map "jk" 'evil-normal-state)
-
 ;;; diminish to keep mode line uncluttered
   (add-hook 'evil-god-start-hook (lambda () (diminish 'god-local-mode)))
   (add-hook 'evil-god-stop-hook (lambda () (diminish-undo 'god-local-mode)))
@@ -39,8 +41,6 @@
 
 
   ;; Setting initial states
-  
-
   (evil-set-initial-state 'python-django-mode 'emacs)
   (add-hook 'git-commit-mode-hook 'evil-insert-state);; Git Commit Mode (a Magit minor mode):
 
@@ -83,8 +83,16 @@
     (evil-mc-mode 1)
     )
 
-
-  (evil-add-hjkl-bindings occur-mode-map 'emacs)
+  (add-hook 'occur-mode-hook
+	    (lambda ()
+	      (evil-add-hjkl-bindings occur-mode-map 'emacs
+		(kbd "/")       'evil-search-forward
+		(kbd "n")       'evil-search-next
+		(kbd "N")       'evil-search-previous
+		(kbd "C-d")     'evil-scroll-down
+		(kbd "C-u")     'evil-scroll-up
+		(kbd "C-w C-w") 'other-window)))
+  
   )
 (provide 'config-evil)
 ;;; config-evil.el ends here
