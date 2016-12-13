@@ -19,6 +19,7 @@
         company-frontends '(company-pseudo-tooltip-frontend company-echo-metadata-frontend)
         company-backends '(company-capf company-yasnippet)
 	company-quickhelp-max-lines 15
+	company-selection-wrap-around t
 	)
         ;; company-quickhelp-delay nil)
         ;; company-statistics-file (concat doom-temp-dir "/company-stats-cache.el"))
@@ -27,10 +28,6 @@
   (require 'company-yasnippet)
 
   (add-to-list 'company-backends 'company-yasnippet)
-  ;; Rewrites evil-complete to use company-dabbrev
-  ;; (setq evil-complete-next-func     'doom/company-evil-complete-next
-  ;;       evil-complete-previous-func 'doom/company-evil-complete-previous)
-
   (push 'company-sort-by-occurrence company-transformers)
 
   (define-key company-active-map "\C-w" nil)
@@ -68,5 +65,36 @@
   ;; )
 
 (global-set-key (kbd "C-SPC") 'company-complete)
+;; (eval-after-load 'company
+;;   '(progn
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "TAB") 'company-select-next)
+  (define-key company-active-map [tab] 'company-select-next)
+  (define-key company-active-map [backtab] 'company-select-previous)
+  (define-key company-active-map (kbd "C-o") #'company-search-kill-others)
+  (define-key company-active-map (kbd "C-s") #'company-filter-candidates)
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous))
+
+
+  ;; Rewrites evil-complete to use company-dabbrev
+  ;; (setq evil-complete-next-func     'doom/company-evil-complete-next
+  ;;       evil-complete-previous-func 'doom/company-evil-complete-previous)
+  ;; (:after company
+  ;;       (:map company-active-map
+  ;;         "C-h"        'company-quickhelp-manual-begin
+  ;;         "C-S-h"      'company-show-doc-buffer
+  ;;         "C-S-s"      'company-search-candidates
+  ;;         "C-SPC"      'company-complete-common-or-cycle
+  ;;         [tab]        'doom/company-complete-common-or-complete-full
+  ;;         [backtab]    'company-select-previous
+  ;;         [escape]     (λ! (company-abort) (evil-normal-state 1))
+  ;;         [C-return]   'counsel-company)
+  ;;       (:map company-search-map
+  ;;         "C-n"        'company-search-repeat-forward
+  ;;         "C-p"        'company-search-repeat-backward
+  ;;         [escape]     'company-search-abort))
 (provide 'config-company)
 ;;; config-company.el ends here
