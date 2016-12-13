@@ -28,6 +28,7 @@
 (depends-on "company-quickhelp")
 (depends-on "company-statistics")
 (depends-on "company-tern")
+(depends-on "company-web")
 (depends-on "concurrent")
 (depends-on "ctable")
 (depends-on "cyberpunk-theme")

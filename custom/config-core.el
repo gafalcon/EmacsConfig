@@ -73,7 +73,6 @@
 
 (setq multi-term-program "/usr/bin/zsh")
 
-
 ;;(setq python-shell-interpreter "/usr/bin/python2.7")
 
 ;; Open urls with firefox
@@ -84,5 +83,10 @@
 
 (setenv "PATH" (concat "/usr/share/smlnj/bin:" (getenv "PATH")))
 (setq exec-path (cons "/usr/share/smlnj/bin"  exec-path))
+
+(add-to-list 'auto-mode-alist '("Cask$" . emacs-lisp-mode))
+;; Start org in visual-line mode
+(add-hook 'org-mode-hook (lambda ()
+			   (visual-line-mode 1)))
 (provide 'config-core)
 ;;; config-core.el ends here

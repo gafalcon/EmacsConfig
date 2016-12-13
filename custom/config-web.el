@@ -22,6 +22,9 @@
 (setq auto-mode-alist
       (cons '("\\.html$" . web-mode) auto-mode-alist))
 (add-to-list 'auto-mode-alist '("\\.blade.php$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs$" . web-mode))
 ;; web-mode engines
 (setq web-mode-engines-alist '(("php" . "\\.phtml\\'") ("blade" . "\\.blade\\.")) )
 
