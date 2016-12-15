@@ -52,7 +52,7 @@
 (use-package company-dict
   :config
   (add-to-list 'company-backends 'company-dict)
-  )
+)
   ;; :commands company-dict
   ;; :config
   ;; (setq company-dict-dir (concat user-emacs-directory "/dict"))

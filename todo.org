@@ -1,14 +1,13 @@
-* packages
-** yasnippet
-*** show yasnippets on ac-list
-** evil packages
-*** evil magit
-*** evil dired
-*** evil org
-** find package to list recent open files
-** customize helm-mt
-** javascript
-*** react/jsx
-*** npm
-*** tern
-
+* TODO packages [/]
+** TODO yasnippet
+*** TODO show yasnippets on ac-list
+** DONE evil packages
+*** DONE evil magit
+*** DONE evil dired
+*** DONE evil org
+** TODO find package to list recent open files
+** TODO customize helm-mt
+** TODO javascript
+*** TODO react/jsx
+*** TODO npm
+*** TODO tern

@@ -31,14 +31,15 @@
 ;;   (let ((project-name (project-name buffer-file-name)))
 ;;     (when project-name (venv-workon project-name))))
 
-(setq jedi:environment-root "jedi2")  ; or any other name you like
-(setq jedi:environment-virtualenv
-      (list "virtualenv2" "--system-site-packages"))
-(setq jedi:setup-keys t)
-(setq jedi:complete-on-dot t)
+(setq jedi:environment-root "jedi2"  ; or any other name you like
+      jedi:environment-virtualenv (list "virtualenv2" "--system-site-packages")
+      jedi:complete-on-dot t
+      jedi:tooltip-method nil
+      )
+;;(setq jedi:setup-keys t)
 
 ;;(add-hook 'python-mode-hook 'jedi-setup-venv)
-;; (add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook 'jedi:setup)
 (defun my/python-mode-hook ()
   (add-to-list 'company-backends 'company-jedi))
 
@@ -47,7 +48,6 @@
 (setq python-shell-interpreter "ipython2"
        python-shell-interpreter-args "-i")
 
-(add-hook 'jedi-mode-hook 'jedi-direx:setup)
 (evil-define-key 'normal python-mode-map "gd" 'jedi:goto-definition)
 
 ;;(provide 'python_jedi_venv)
