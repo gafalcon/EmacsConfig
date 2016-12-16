@@ -7,17 +7,18 @@
   :commands (company-mode global-company-mode company-complete
              company-complete-common company-manual-begin company-grab-line)
   :init
-  (setq company-idle-delay 1
+  (setq company-idle-delay 0.3
         company-minimum-prefix-length 2
         company-tooltip-limit 10
         company-dabbrev-downcase nil
         company-dabbrev-ignore-case nil
         company-dabbrev-code-other-buffers t
+	company-dabbrev-code-everywhere t
         company-tooltip-align-annotations t
         company-require-match 'never
         company-global-modes '(not eshell-mode comint-mode erc-mode message-mode help-mode)
         company-frontends '(company-pseudo-tooltip-frontend company-echo-metadata-frontend)
-        company-backends '(company-capf company-yasnippet)
+        company-backends '(company-capf company-yasnippet company-dabbrev)
 	company-quickhelp-max-lines 15
 	company-selection-wrap-around t
 	)
@@ -65,6 +66,9 @@
   ;; )
 
 (global-set-key (kbd "C-SPC") 'company-complete)
+(define-key evil-insert-state-map (kbd "C-x C-k") 'company-dict)
+(define-key evil-insert-state-map (kbd "C-y") 'company-yasnippet)
+(define-key evil-insert-state-map (kbd "<C-tab>") 'company-dabbrev)
 ;; (eval-after-load 'company
 ;;   '(progn
 (with-eval-after-load 'company
