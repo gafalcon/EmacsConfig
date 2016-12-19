@@ -40,14 +40,14 @@
 ;;           (lambda ()
 ;;             (add-to-list 'ac-sources 'ac-source-c-headers)
 ;;             (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
-(defun my:ac-c-header-init()
-  (require 'ac-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-header-symbols t)
-)
+;; (defun my:ac-c-header-init()
+;;   (require 'ac-c-headers)
+;;   (add-to-list 'ac-sources 'ac-source-c-headers)
+;;   (add-to-list 'ac-sources 'ac-source-c-header-symbols t)
+;; )
 
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
+;; (add-hook 'c++-mode-hook 'my:ac-c-header-init)
+;; (add-hook 'c-mode-hook 'my:ac-c-header-init)
 
 ;;turn-on semantic
 (semantic-mode 1)

@@ -1,6 +1,4 @@
-* TODO packages [/]
-** TODO yasnippet
-*** TODO show yasnippets on ac-list
+* TODO packages [1/5]
 ** DONE evil packages
 *** DONE evil magit
 *** DONE evil dired
@@ -11,3 +9,4 @@
 *** TODO react/jsx
 *** TODO npm
 *** TODO tern
+** TODO csswatcher company-web

@@ -31,8 +31,9 @@
   :config
   (smartparens-global-mode t)
   (sp-pair "\"" "\"" :wrap "C-\"")
+
+  (use-package smartparens-config)
   )
-(use-package smartparens-config)
 
 
 (global-auto-revert-mode t) ;; auto refresh buffers when files have changed (for Git)
@@ -44,7 +45,7 @@
 (global-set-key (kbd "C-c i") 'helm-semantic-or-imenu)
 ;; Global semantic
 ;;(global-set-key (kbd "C-c i") 'helm-semantic)
-
+(global-set-key (kbd "M-s s") 'swiper)
 (global-set-key (kbd "<C-up>") 'shrink-window)
 (global-set-key (kbd "<C-down>") 'enlarge-window)
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
@@ -88,5 +89,7 @@
 ;; Start org in visual-line mode
 (add-hook 'org-mode-hook (lambda ()
 			   (visual-line-mode 1)))
+
+(recentf-mode 1)
 (provide 'config-core)
 ;;; config-core.el ends here

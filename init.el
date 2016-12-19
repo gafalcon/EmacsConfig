@@ -9,7 +9,6 @@
 
 ;;(require 'yasnippet)
 (yas-global-mode t)
-
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "<C-return>") 'yas-expand)
@@ -20,7 +19,6 @@
 (load "config-ui.el")
 (load "config-evil.el")
 (load "config-company.el")
-;; (load "config-ac.el")
 (load "config-helm.el")
 (load "config-project.el")
 (load "config-neotree.el")
@@ -32,6 +30,7 @@
 (load "config-js.el")
 (load "config-typescript.el")
 (load "config-php.el")
+(load "config-c.el")
 ;(require 'ess-site)
 (when (>= emacs-major-version 24)
   (require 'package)
@@ -74,9 +73,9 @@
     ("eb0a314ac9f75a2bf6ed53563b5d28b563eeba938f8433f6d1db781a47da1366" "ef479623c75026d8ba1de98a8cb74198f6f3eedc6fca509990ac2559ba830675" default)))
  '(package-selected-packages
    (quote
-    (company-jedi company-web company-tern company-dict company-statistics company-quickhelp evil-mc dired-k evil-magit yaml-mode windata web-mode virtualenvwrapper use-package tree-mode tide tern-auto-complete tangotango-theme sublime-themes solarized-theme sml-mode smartparens scala-mode2 rvm ruby-compilation robe rhtml-mode restclient-helm react-snippets rainbow-mode python-django pyflakes projectile-rails powerline-evil php-refactor-mode php-auto-yasnippets paradox pallet nlinum neotree monokai-theme magit lua-mode key-chord jump jinja2-mode jade-mode impatient-mode httprepl helm-swoop helm-projectile helm-mt helm-gtags helm-c-yasnippet haskell-mode haml-mode grizzl git function-args flycheck-pyflakes find-file-in-project expand-region evil-tutor evil-tabs evil-org evil-multiedit evil-god-state evil-anzu etags-select ensime enh-ruby-mode dracula-theme doom-themes discover-my-major cyberpunk-theme color-theme-sanityinc-tomorrow auto-complete-c-headers auctex atom-one-dark-theme atom-dark-theme ample-theme ag ac-js2 ac-helm ac-etags ac-emmet ac-c-headers ac-anaconda)))
+    (rtags company-irony irony company-jedi company-web company-tern company-dict company-statistics company-quickhelp evil-mc dired-k evil-magit yaml-mode windata web-mode virtualenvwrapper use-package tree-mode tide tern-auto-complete tangotango-theme sublime-themes solarized-theme sml-mode smartparens scala-mode2 rvm ruby-compilation robe rhtml-mode restclient-helm react-snippets rainbow-mode python-django pyflakes projectile-rails powerline-evil php-refactor-mode php-auto-yasnippets paradox pallet nlinum neotree monokai-theme magit lua-mode key-chord jump jinja2-mode jade-mode impatient-mode httprepl helm-swoop helm-projectile helm-mt helm-gtags helm-c-yasnippet haskell-mode haml-mode grizzl git function-args flycheck-pyflakes find-file-in-project expand-region evil-tutor evil-tabs evil-org evil-multiedit evil-god-state evil-anzu etags-select ensime enh-ruby-mode dracula-theme doom-themes discover-my-major cyberpunk-theme color-theme-sanityinc-tomorrow auto-complete-c-headers auctex atom-one-dark-theme atom-dark-theme ample-theme ag ac-js2 ac-helm ac-etags ac-emmet ac-c-headers ac-anaconda)))
  '(paradox-automatically-star t)
- '(paradox-github-token t t))
+ '(paradox-github-token t))
 
 
 ;; ;; ac-etags
