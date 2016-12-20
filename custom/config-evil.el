@@ -78,10 +78,10 @@
     )
   (require 'evil-org)
 
-  (use-package evil-mc
-    :config
-    (evil-mc-mode 1)
-    )
+  ;; (use-package evil-mc
+  ;;   :config
+  ;;   (evil-mc-mode 1)
+  ;;   )
 
   (add-hook 'occur-mode-hook
 	    (lambda ()
