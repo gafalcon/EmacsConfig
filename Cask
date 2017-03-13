@@ -53,6 +53,7 @@
 (depends-on "evil-multiedit")
 (depends-on "evil-org")
 (depends-on "evil-tabs")
+(depends-on "evil-terminal-cursor-changer")
 (depends-on "evil-tutor")
 (depends-on "expand-region")
 (depends-on "f")

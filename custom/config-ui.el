@@ -12,9 +12,10 @@
       inhibit-startup-message t
       inhibit-startup-echo-area-message t)
 ;; theme
-(if (display-graphic-p)
-	(load-theme 'dracula t)
-  (load-theme 'cyberpunk t))
+;; (if (display-graphic-p)
+;; 	(load-theme 'atom-dark t)
+;;   (load-theme 'cyberpunk t))
+(load-theme 'atom-dark t)
 (use-package doom-themes)
 ;; (require 'doom-themes)
 (set-face-attribute 'region nil :background "#3d4451")

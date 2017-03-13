@@ -92,6 +92,11 @@
 		(kbd "C-d")     'evil-scroll-down
 		(kbd "C-u")     'evil-scroll-up
 		(kbd "C-w C-w") 'other-window)))
+  (unless (display-graphic-p)
+    (require 'evil-terminal-cursor-changer)
+    (evil-terminal-cursor-changer-activate) ; or (etcc-on)
+    )
+
   
   )
 (provide 'config-evil)

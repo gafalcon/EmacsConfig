@@ -22,7 +22,7 @@
 (load "config-helm.el")
 (load "config-project.el")
 (load "config-neotree.el")
-(load "config-flymake.el")
+;; (load "config-flymake.el")
 
 ;; Languages
 (load "config-web.el")
@@ -70,10 +70,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("eb0a314ac9f75a2bf6ed53563b5d28b563eeba938f8433f6d1db781a47da1366" "ef479623c75026d8ba1de98a8cb74198f6f3eedc6fca509990ac2559ba830675" default)))
+    ("6254372d3ffe543979f21c4a4179cd819b808e5dd0f1787e2a2a647f5759c1d1" "a1289424bbc0e9f9877aa2c9a03c7dfd2835ea51d8781a0bf9e2415101f70a7e" "eb0a314ac9f75a2bf6ed53563b5d28b563eeba938f8433f6d1db781a47da1366" "ef479623c75026d8ba1de98a8cb74198f6f3eedc6fca509990ac2559ba830675" default)))
  '(package-selected-packages
    (quote
-    (rtags company-irony irony company-jedi company-web company-tern company-dict company-statistics company-quickhelp evil-mc dired-k evil-magit yaml-mode windata web-mode virtualenvwrapper use-package tree-mode tide tern-auto-complete tangotango-theme sublime-themes solarized-theme sml-mode smartparens scala-mode2 rvm ruby-compilation robe rhtml-mode restclient-helm react-snippets rainbow-mode python-django pyflakes projectile-rails powerline-evil php-refactor-mode php-auto-yasnippets paradox pallet nlinum neotree monokai-theme magit lua-mode key-chord jump jinja2-mode jade-mode impatient-mode httprepl helm-swoop helm-projectile helm-mt helm-gtags helm-c-yasnippet haskell-mode haml-mode grizzl git function-args flycheck-pyflakes find-file-in-project expand-region evil-tutor evil-tabs evil-org evil-multiedit evil-god-state evil-anzu etags-select ensime enh-ruby-mode dracula-theme doom-themes discover-my-major cyberpunk-theme color-theme-sanityinc-tomorrow auto-complete-c-headers auctex atom-one-dark-theme atom-dark-theme ample-theme ag ac-js2 ac-helm ac-etags ac-emmet ac-c-headers ac-anaconda)))
+    (evil-terminal-cursor-changer rtags company-irony irony company-jedi company-web company-tern company-dict company-statistics company-quickhelp evil-mc dired-k evil-magit yaml-mode windata web-mode virtualenvwrapper use-package tree-mode tide tern-auto-complete tangotango-theme sublime-themes solarized-theme sml-mode smartparens scala-mode2 rvm ruby-compilation robe rhtml-mode restclient-helm react-snippets rainbow-mode python-django pyflakes projectile-rails powerline-evil php-refactor-mode php-auto-yasnippets paradox pallet nlinum neotree monokai-theme magit lua-mode key-chord jump jinja2-mode jade-mode impatient-mode httprepl helm-swoop helm-projectile helm-mt helm-gtags helm-c-yasnippet haskell-mode haml-mode grizzl git function-args flycheck-pyflakes find-file-in-project expand-region evil-tutor evil-tabs evil-org evil-multiedit evil-god-state evil-anzu etags-select ensime enh-ruby-mode dracula-theme doom-themes discover-my-major cyberpunk-theme color-theme-sanityinc-tomorrow auto-complete-c-headers auctex atom-one-dark-theme atom-dark-theme ample-theme ag ac-js2 ac-helm ac-etags ac-emmet ac-c-headers ac-anaconda)))
  '(paradox-automatically-star t)
  '(paradox-github-token t))
 
@@ -93,4 +93,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil)))))
