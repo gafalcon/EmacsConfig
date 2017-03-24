@@ -14,9 +14,17 @@
 
 (evil-define-key 'normal c-mode-base-map "gd" 'rtags-find-symbol-at-point)
 
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
+(defun my-company-irony ()
+  (unless (eq major-mode 'php-mode)
+    (irony-mode)
+    (unless (memq 'company-irony company-backends)
+      (setq-local company-backends (cons 'company-irony company-backends)))
+    )
+  )
+
+(add-hook 'c-mode-hook #'my-company-irony)
+(add-hook 'c++-mode-hook #'my-company-irony)
+(add-hook 'objc-mode-hook #'my-company-irony)
 
 ;; replace the `completion-at-point' and `complete-symbol' bindings in
 ;; irony-mode's buffers by irony-mode's function
@@ -30,9 +38,7 @@
 (add-hook 'irony-mode-hook 'my-irony-mode-hook)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
-(setq company-backends (delete 'company-semantic company-backends))
-(eval-after-load 'company
-  '(add-to-list
-    'company-backends 'company-irony))
+
+;;(setq company-backends (delete 'company-semantic company-backends))
 (provide 'config-c)
 ;;; config-c.el ends here

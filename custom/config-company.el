@@ -28,7 +28,8 @@
   (require 'company-yasnippet)
 
   (add-to-list 'company-backends 'company-yasnippet)
-  (push 'company-sort-by-occurrence company-transformers)
+  (push 'company-sort-by-backend-importance company-transformers)
+  ;; (push 'company-sort-by-occurrence company-transformers)
 
   (define-key company-active-map "\C-w" nil)
 
@@ -38,8 +39,9 @@
   (require 'company-quickhelp)
   (company-quickhelp-mode +1)
 
-  (require 'company-statistics)
-  (company-statistics-mode +1))
+  ;; (require 'company-statistics)
+  ;; (company-statistics-mode +1)
+  )
 
 (use-package company-dabbrev :commands company-dabbrev)
 (use-package company-dabbrev-code :commands company-dabbrev-code)
