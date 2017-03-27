@@ -91,5 +91,6 @@
 			   (visual-line-mode 1)))
 
 (recentf-mode 1)
+(setq ring-bell-function 'ignore)
 (provide 'config-core)
 ;;; config-core.el ends here
