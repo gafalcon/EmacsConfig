@@ -91,5 +91,7 @@
 			   (visual-line-mode 1)))
 
 (recentf-mode 1)
+
+(server-start)
 (provide 'config-core)
 ;;; config-core.el ends here

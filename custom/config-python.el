@@ -42,7 +42,7 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (defun my/python-mode-hook ()
   "Add new backends on python mode."
-  (add-to-list 'company-backends '(company-jedi company-dabbrev-code company-yasnippet)))
+  (add-to-list 'company-backends '(company-jedi :with company-dabbrev-code company-yasnippet)))
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 ; use IPython
