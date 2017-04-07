@@ -93,5 +93,6 @@
 (recentf-mode 1)
 
 (server-start)
+(setq ring-bell-function 'ignore)
 (provide 'config-core)
 ;;; config-core.el ends here
