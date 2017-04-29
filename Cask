@@ -28,6 +28,7 @@
 (depends-on "company-irony")
 (depends-on "company-jedi")
 (depends-on "company-quickhelp")
+(depends-on "company-rtags")
 (depends-on "company-statistics")
 (depends-on "company-tern")
 (depends-on "company-web")
