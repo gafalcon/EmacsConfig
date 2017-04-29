@@ -17,3 +17,6 @@ M-( : Wrapping in () selected region
 , n: neotree
 region
 C-v: evil-visual-mode : Select rectangle
+
+C-p: evil -paste -pop:  paste previous copied/yanked text
+C-n: evil -paste -pop: paste next copied/yanked text

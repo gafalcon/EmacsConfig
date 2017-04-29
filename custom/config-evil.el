@@ -45,11 +45,19 @@
   (add-hook 'git-commit-mode-hook 'evil-insert-state);; Git Commit Mode (a Magit minor mode):
 
 
-  (require 'powerline)
-  (require 'powerline-evil)
-  (powerline-center-theme)
-  (powerline-evil-center-color-theme)
+(setq telephone-line-lhs
+        '((evil   . (telephone-line-evil-tag-segment))
+          (accent . (telephone-line-vc-segment
+                     telephone-line-erc-modified-channels-segment
+                     telephone-line-process-segment))
+          (nil    . (telephone-line-minor-mode-segment
+                     telephone-line-buffer-segment))))
+(setq telephone-line-rhs
+        '((nil    . (telephone-line-misc-info-segment))
+          (accent . (telephone-line-major-mode-segment))
+          (evil   . (telephone-line-airline-position-segment))))
 
+(telephone-line-mode t)
 
   ;; (global-evil-tabs-mode t)
   ;; (define-key evil-normal-state-map (kbd "<C-tab>") 'other-window)
