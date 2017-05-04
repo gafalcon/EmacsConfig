@@ -15,7 +15,8 @@
 ;; (if (display-graphic-p)
 ;; 	(load-theme 'atom-dark t)
 ;;   (load-theme 'cyberpunk t))
-(load-theme 'atom-dark t)
+;; (load-theme 'atom-dark t)
+(load-theme 'base16-dracula t)
 (use-package doom-themes)
 ;; (require 'doom-themes)
 (set-face-attribute 'region nil :background "#3d4451")
@@ -32,6 +33,8 @@
 ;; (require 'doom-neotree)
 
 (global-nlinum-mode t)
+(set-frame-font "Monospace Bold 11" nil t)
+
 
 
 (setq org-fontify-whole-heading-line t
